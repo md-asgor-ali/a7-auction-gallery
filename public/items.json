@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "title": "Vintage Leica M3 Camera",
+      "description": "Classic camera with excellent build.",
+      "currentBidPrice": 2850,
+      "timeLeft": "2 Days left",
+      "bidsCount": 12,
+      "image": " https://i.ibb.co.com/bjvRFjbM/image-1.png"
+    },
+    {
+      "id": 2,
+      "title": "1965 Gibson SG Standard Electric Guitar",
+      "description": "Iconic electric guitar from the 60s.",
+      "currentBidPrice": 2650,
+      "timeLeft": "2 Days left",
+      "bidsCount": 15,
+      "image": "https://i.ibb.co.com/0pnstf1b/image-2.png"
+    },
+    {
+      "id": 3,
+      "title": "Original Apple Macintosh 128K (1984)",
+      "description": "First ever Apple Mac released.",
+      "currentBidPrice": 3450,
+      "timeLeft": "3 Days left",
+      "bidsCount": 18,
+      "image": "https://i.ibb.co.com/W43Kdfb3/image-3.png"
+    },
+    {
+      "id": 4,
+      "title": "Rolex Submariner 16610",
+      "description": "Iconic luxury dive watch.",
+      "currentBidPrice": 9250,
+      "timeLeft": "1 Day left",
+      "bidsCount": 9,
+      "image": "https://i.ibb.co/twR03N7K/image-4.png"
+    },
+    {
+      "id": 5,
+      "title": "Mid-Century Modern Eames Lounge Chair",
+      "description": "Timeless comfort and design.",
+      "currentBidPrice": 3850,
+      "timeLeft": "4 Days left",
+      "bidsCount": 10,
+      "image": "//i.ibb.co.com/nqRxg5z2/image-6.png"
+    },
+    {
+      "id": 6,
+      "title": "Banksy Original Screen Print",
+      "description": "Original art from the anonymous icon.",
+      "currentBidPrice": 12850,
+      "timeLeft": "2 Days left",
+      "bidsCount": 20,
+      "image": "https://i.ibb.co.com/WpH5wGvS/image-5.png"
+    },
+    {
+      "id": 7,
+      "title": "Ferrari 250 GTO Poster",
+      "description": "Rare automotive art collectible.",
+      "currentBidPrice": 450,
+      "timeLeft": "5 Days left",
+      "bidsCount": 7,
+      "image": "https://i.ibb.co.com/1t2C7rQR/image-7.png"
+    }
+  ]
+  
