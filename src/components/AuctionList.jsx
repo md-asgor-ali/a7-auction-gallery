@@ -51,7 +51,7 @@ const AuctionList = () => {
         {/* Auction Table */}
         <div className="flex-1 bg-white rounded-lg shadow p-4 overflow-x-auto ">
           <div className="border rounded">
-            {" "}
+            
             <table className="w-full text-left ">
               <thead>
                 <tr className="border-b">
@@ -148,7 +148,7 @@ const AuctionList = () => {
           )}
 
           <div className="mt-6 border-t pt-4 font-semibold text-right text-lg">
-            Total bids Amount &nbsp;
+            Total bids Amount: &nbsp;
             <span className="text-black">${totalAmount.toLocaleString()}</span>
           </div>
         </div>
