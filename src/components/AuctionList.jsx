@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 const AuctionList = () => {
+
+const handleAddNewItems=()=>{
+  toast('Item Added to your Favorite Lists')
+}
+const handleRemoveNewItems=()=>{
+  toast('Item Removed From Favorites')
+}
+
+
   const [bids, setBids] = useState([]);
   const [favorites, setFavorites] = useState([]);
 
@@ -68,6 +78,7 @@ const AuctionList = () => {
                   <td className="py-3">{item.timeLeft}</td>
                   <td className="py-3 text-center">
                     <button
+                    
                       className={`text-xl transition ${
                         isFavorited(item.id)
                           ? "text-red-500 cursor-not-allowed"
@@ -76,6 +87,7 @@ const AuctionList = () => {
                       onClick={() => {
                         if (isFavorited(item.id)) return;
                         toggleFavorite(item);
+                        handleAddNewItems();
                       }}
                     >
                       {isFavorited(item.id) ? "❤️" : "♡"}
@@ -96,10 +108,10 @@ const AuctionList = () => {
           {favorites.length === 0 ? (
             <p className="text-sm text-gray-500">No favorites yet.</p>
           ) : (
-            <div className="space-y-4">
+            <div className="space-y-4 ">
               {favorites.map((fav) => (
-                <div key={fav.id} className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
+                <div key={fav.id} className="flex items-center justify-between border rounded p-4">
+                  <div className="flex items-center gap-3 ">
                     <img
                       src={fav.image}
                       className="w-10 h-10 rounded"
@@ -115,7 +127,10 @@ const AuctionList = () => {
                   </div>
                   <button
                     className="text-gray-400 hover:text-red-500 text-sm"
-                    onClick={() => removeFavorite(fav.id)}
+                    onClick={() => {
+                      removeFavorite(fav.id);
+                      handleRemoveNewItems();
+                    }}
                   >
                     ✕
                   </button>
@@ -130,6 +145,7 @@ const AuctionList = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
