@@ -1,5 +1,5 @@
 import React from "react";
-import group from '../assets/Group 3466088.png'
+import group from "../assets/Group 3466088.png";
 
 const Navbar = () => {
   return (
@@ -14,11 +14,19 @@ const Navbar = () => {
           </a>
         </div>
         <div>
-          <ul className="flex gap-6 font-semibold ">
-            <a href=""><li>Home</li></a>
-            <a href=""><li>Auctions</li></a>
-            <a href=""><li>Categories</li></a>
-            <a href=""><li>How to works</li></a>
+          <ul className="flex gap-8 font-semibold ">
+            <a href="">
+              <li>Home</li>
+            </a>
+            <a href="">
+              <li>Auctions</li>
+            </a>
+            <a href="">
+              <li>Categories</li>
+            </a>
+            <a href="">
+              <li>How to works</li>
+            </a>
           </ul>
         </div>
         <div className="">
@@ -69,10 +77,7 @@ const Navbar = () => {
               className="btn btn-ghost btn-circle avatar"
             >
               <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src={group}
-                />
+                <img alt="Tailwind CSS Navbar component" src={group} />
               </div>
             </div>
             <ul

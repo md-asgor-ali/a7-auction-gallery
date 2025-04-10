@@ -104,9 +104,14 @@ const AuctionList = () => {
           <h3 className="text-[#003EA4] text-lg font-semibold mb-4 flex items-center gap-2 border-b">
             <span>♡</span> Favorite Items
           </h3>
-
+          {/* Content */}
           {favorites.length === 0 ? (
-            <p className="text-sm text-gray-500">No favorites yet.</p>
+            <div className="text-center py-6 space-y-1">
+              <p className="text-lg text-gray-500">No favorites yet.</p>
+              <p className="text-sm text-gray-400">
+                Click the heart icon on any item to add it to your favorites
+              </p>
+            </div>
           ) : (
             <div className="space-y-4 ">
               {favorites.map((fav) => (
@@ -129,7 +134,7 @@ const AuctionList = () => {
                     </div>
                   </div>
                   <button
-                    className="text-gray-400 hover:text-red-500 text-sm"
+                    className="text-gray-400 hover:text-red-500 text-sm cursor-pointer"
                     onClick={() => {
                       removeFavorite(fav.id);
                       handleRemoveNewItems();
