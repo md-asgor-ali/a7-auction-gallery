@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
 const AuctionList = () => {
-
-const handleAddNewItems=()=>{
-  toast('Item Added to your Favorite Lists')
-}
-const handleRemoveNewItems=()=>{
-  toast('Item Removed From Favorites')
-}
-
+  const handleAddNewItems = () => {
+    toast("Item Added to your Favorite Lists");
+  };
+  const handleRemoveNewItems = () => {
+    toast("Item Removed From Favorites");
+  };
 
   const [bids, setBids] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -51,52 +49,54 @@ const handleRemoveNewItems=()=>{
 
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Auction Table */}
-        <div className="flex-1 bg-white rounded-lg shadow p-4 overflow-x-auto">
-          <table className="w-full text-left">
-            <thead>
-              <tr className="border-b">
-                <th className="py-2">Items</th>
-                <th className="py-2">Current Bid</th>
-                <th className="py-2">Time Left</th>
-                <th className="py-2 text-center">Bid Now</th>
-              </tr>
-            </thead>
-            <tbody>
-              {bids.map((item) => (
-                <tr key={item.id} className="border-b hover:bg-gray-50">
-                  <td className="py-3 flex items-center gap-3">
-                    <img
-                      src={item.image}
-                      className="w-12 h-12 object-cover rounded"
-                      alt={item.title}
-                    />
-                    <span>{item.title}</span>
-                  </td>
-                  <td className="py-3">
-                    ${item.currentBidPrice.toLocaleString()}
-                  </td>
-                  <td className="py-3">{item.timeLeft}</td>
-                  <td className="py-3 text-center">
-                    <button
-                    
-                      className={`text-xl transition ${
-                        isFavorited(item.id)
-                          ? "text-red-500 cursor-not-allowed"
-                          : "text-gray-400 hover:text-red-500 cursor-pointer"
-                      }`}
-                      onClick={() => {
-                        if (isFavorited(item.id)) return;
-                        toggleFavorite(item);
-                        handleAddNewItems();
-                      }}
-                    >
-                      {isFavorited(item.id) ? "❤️" : "♡"}
-                    </button>
-                  </td>
+        <div className="flex-1 bg-white rounded-lg shadow p-4 overflow-x-auto ">
+          <div className="border rounded">
+            {" "}
+            <table className="w-full text-left ">
+              <thead>
+                <tr className="border-b">
+                  <th className="py-2 pl-4">Items</th>
+                  <th className="py-2">Current Bid</th>
+                  <th className="py-2">Time Left</th>
+                  <th className="py-2 text-center">Bid Now</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="">
+                {bids.map((item) => (
+                  <tr key={item.id} className="border-b hover:bg-gray-50">
+                    <td className="py-3 flex items-center gap-3 pl-3">
+                      <img
+                        src={item.image}
+                        className="w-12 h-12 object-cover rounded"
+                        alt={item.title}
+                      />
+                      <span>{item.title}</span>
+                    </td>
+                    <td className="py-3">
+                      ${item.currentBidPrice.toLocaleString()}
+                    </td>
+                    <td className="py-3">{item.timeLeft}</td>
+                    <td className="py-3 text-center">
+                      <button
+                        className={`text-xl transition ${
+                          isFavorited(item.id)
+                            ? "text-red-500 cursor-not-allowed"
+                            : "text-gray-400 hover:text-red-500 cursor-pointer"
+                        }`}
+                        onClick={() => {
+                          if (isFavorited(item.id)) return;
+                          toggleFavorite(item);
+                          handleAddNewItems();
+                        }}
+                      >
+                        {isFavorited(item.id) ? "❤️" : "♡"}
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Favorites Sidebar */}
@@ -110,7 +110,10 @@ const handleRemoveNewItems=()=>{
           ) : (
             <div className="space-y-4 ">
               {favorites.map((fav) => (
-                <div key={fav.id} className="flex items-center justify-between border rounded p-4">
+                <div
+                  key={fav.id}
+                  className="flex items-center justify-between border rounded p-4"
+                >
                   <div className="flex items-center gap-3 ">
                     <img
                       src={fav.image}
