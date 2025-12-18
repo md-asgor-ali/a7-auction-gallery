@@ -3,7 +3,7 @@ import group from "../assets/Group 3466088.png";
 
 const Navbar = () => {
   return (
-    <div className="">
+    <div className="sticky top-0 h-fit">
       <div className="navbar bg-base-100 shadow-sm flex justify-around">
         <div className="">
           <a className="btn btn-ghost text-xl">

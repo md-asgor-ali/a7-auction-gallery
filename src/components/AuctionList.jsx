@@ -15,11 +15,13 @@ const AuctionList = () => {
   useEffect(() => {
     fetch("items.json")
       .then((res) => res.json())
-      .then((data) => setBids(data));
+      .then((data) => setBids(data))
+      .catch((error) => console.log(error));
   }, []);
 
   const toggleFavorite = (item) => {
     const isFavorited = favorites.find((fav) => fav.id === item.id);
+
     if (isFavorited) {
       setFavorites(favorites.filter((fav) => fav.id !== item.id));
     } else {
@@ -51,7 +53,6 @@ const AuctionList = () => {
         {/* Auction Table */}
         <div className="flex-1 bg-white rounded-lg shadow p-4 overflow-x-auto ">
           <div className="border rounded">
-            
             <table className="w-full text-left ">
               <thead>
                 <tr className="border-b">
